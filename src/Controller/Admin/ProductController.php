@@ -8,9 +8,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ProductController extends AbstractController
-{   
+{
     /**
-     * @Route("admin/products", name"admin_products_list")
+     * @Route("admin/products", name="admin_products_list")
      */
 
     public function products(ProductRepository $productRepository)
@@ -20,7 +20,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("admin/product/{id}", name="product")
+     * @Route("admin/product/{id}", name="admin_product")
      */
 
     public function product($id, ProductRepository $productRepository)

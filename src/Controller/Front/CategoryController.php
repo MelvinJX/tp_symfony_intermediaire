@@ -18,4 +18,14 @@ class CategoryController extends AbstractController
         $categories = $categoryRepository->findAll();
         return $this->render('front/category/categories.html.twig', ['categories' => $categories]);
     }
+
+    /**
+     * @Route("category/{id}", name="category")
+     */
+
+    public function category($id, CategoryRepository $categoryRepository)
+    {
+        $category = $categoryRepository->find($id);
+        return $this->render('front/category/category.html.twig', ['category' => $category]);
+    }
 }
